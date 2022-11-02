@@ -32,3 +32,17 @@ https://betterprogramming.pub/understanding-the-difference-between-named-and-def
 namespace imports https://medium.com/unsplash/named-namespace-imports-7345212bbffb
 
 ALL IMPORTS: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
+
+
+
+### Splitting the code in SPA applications is very important for:
+
+ - to prevent conflicts with GIT when working in TEAM
+
+ - to have the code more orderly;
+
+ - to facilitate debugging;
+
+ - to improve performance;
+
+ - to be able to reuse parts of the code and avoid rewriting the same code several times.
