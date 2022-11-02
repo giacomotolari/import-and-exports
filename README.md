@@ -1,4 +1,5 @@
-Imports and Exports
+### Imports and Exports
+
 - Default exports vs. named exports: 
   `export default`, `export {<var1>, <var2> [, ...]}`
 - Namespacing imports: 
@@ -6,7 +7,7 @@ Imports and Exports
 - Destructuring imports: `import { <var1>, <var2 [, ...]} from `<path>`
 
 
-Exercise:
+## Exercise:
 
 Browser-modules-imports-exports https://classroom.github.com/a/9O7KNxyA
 
@@ -15,12 +16,12 @@ Exports without a default tag are Named exports. Exports with the default tag ar
 Using one over the other can have effects on your code readability, file structure, and component organization. 
 
 
- Named Exports
+ ## Named Exports
 
  Can export multiple values
  MUST use the exported name when importing
 
- Default Exports
+ ## Default Exports
 
  Export a single value
  Can use any name when importing
