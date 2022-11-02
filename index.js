@@ -38,5 +38,6 @@ console.log("scores:", scores);
 // console.log('bestTeam:',bestTeamObj);
 // console.log('bestTeam:',bestTeam());
 
+
 ////if the variable has been defined and we return a VARIABLE:
 console.log("bestTeam:", bestTeam);
