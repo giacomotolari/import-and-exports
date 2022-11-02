@@ -1,42 +1,72 @@
-//namespace import
-import * as teams from "./modules/teams.js";
-//named imports
-import {
-  //with alias we can change the name of a named import
-  getHowManyTeams as howManyTeams,
-  getTeamNames,
-  getTeamPlayersFirstName,
-} from "./modules/actions.js";
-//default and named
-import teamsRanking, { scores } from "./modules/statistics.js";
-//default
-import bestTeam from "./modules/bestTeam.js";
-//side-effect import
-import "./modules/sideEffect.js";
+//TEAMS
+const teamA = {
+  teamName: "teamA",
+  players: [
+    { firstName: "mike", lastName: "smith", age: 20 },
+    { firstName: "sarah", lastName: "smith", age: 24 },
+  ],
+};
 
-//TEAM
-// console.log("teams:", teams);
-console.log("teamA:", teams.teamA);
+const teamB = {
+  teamName: "teamB",
+  players: [
+    { firstName: "hugo", lastName: "james", age: 21 },
+    { firstName: "laura", lastName: "uru", age: 22 },
+  ],
+};
 
-//destructuring
-const { players } = teams.teamA;
-console.log("players-team-A:", players);
+const teamC = {
+  teamName: "teamC",
+  players: [
+    { firstName: "mike", lastName: "smith", age: 18 },
+    { firstName: "sarah", lastName: "james", age: 30 },
+  ],
+};
+
+const teamD = {
+  teamName: "teamD",
+  players: [
+    { firstName: "jack", lastName: "ionu", age: 29 },
+    { firstName: "matt", lastName: "otto", age: 40 },
+  ],
+};
+
+const allTeams = [teamA, teamB, teamC, teamD];
+
+console.log(allTeams);
 
 //ACTIONS
-console.log("getTeamNames:", getTeamNames(teams.allTeams));
-console.log("howManyTeams:", howManyTeams(teams.allTeams));
-console.log("getTeamPlayersFirstName:", getTeamPlayersFirstName(teams.teamA));
+
+const getTeamNames = (teams) => teams.map((team) => team.teamName);
+
+const getHowManyTeams = (teams) => teams.length;
+
+const getTeamPlayersFirstName = (team) =>
+  team.players.map((player) => player.firstName);
+
+console.log("getTeamNames:", getTeamNames(allTeams));
+console.log("getHowManyTeams:", getHowManyTeams(allTeams));
+console.log("getTeamPlayersFirstName:", getTeamPlayersFirstName(teamA));
 
 //STATISTICS
-console.log("teamsRanking:", teamsRanking);
-console.log("scores:", scores);
+const teamsRanking = {
+  first: "teamA",
+  second: "teamD",
+  third: "teamC",
+  fourth: "teamB",
+};
+
+const scores = {
+  teamA: 12,
+  teamD: 9,
+  teamC: 4,
+  teamB: 1,
+};
 
 //BEST TEAM
-//if the variable has not been defined and we return a function:
+const bestTeam = {
+  name: teamsRanking.first,
+  scores: scores.teamA,
+};
 
-// const bestTeamObj = bestTeam()
-// console.log('bestTeam:',bestTeamObj);
-// console.log('bestTeam:',bestTeam());
-
-////if the variable has been defined and we return a VARIABLE:
 console.log("bestTeam:", bestTeam);
